@@ -22,7 +22,7 @@ import java.util.function.Function;
 @Component
 @Slf4j
 @RequiredArgsConstructor
-public class PersonFunction implements Function<Message<PersonDto>, Object> {
+public class PersonFunction implements Function<Message<PersonDto>, APIGatewayProxyResponseEvent> {
     private final PersonService personService;
     private final Validator validator;
     private final Converter<PersonDto, Person> personConverter;
